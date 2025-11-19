@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // confessions: read/write only via server SDK (admin)
+    match /confessions/{doc} {
+      allow read, write: if false;
+    }
+    match /meta/{doc} {
+      allow read, write: if false;
+    }
+    match /settings/{doc} {
+      allow read, write: if false;
+    }
+    match /{document=**} {
+      allow read: if false;
+    }
+  }
+}

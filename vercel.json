@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "routes": [
+    {
+      "src": "/api/bot",
+      "dest": "/api/bot.js"
+    }
+  ],
+  "functions": {
+    "api/bot.js": {
+      "memory": 512,
+      "maxDuration": 10
+    }
+  }
+}
